@@ -1,0 +1,11 @@
+<h1> Registration </h1>
+
+<ul>
+  <% @form_pages.each do |form| %>
+      <li>
+        <%= link_to form.username, form %>
+      </li>
+    <% end %>
+</ul>
+
+<%= link_to "New Form", new_form_page_path %>

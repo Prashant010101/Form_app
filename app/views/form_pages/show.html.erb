@@ -1,0 +1,26 @@
+<h1>Form Page Details</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <td><%= @form_page.username %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= @form_page.email %></td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td><%= @form_page.age %></td>
+  </tr>
+</table><br><br>
+
+<ul>
+  <li><%= link_to "Edit", edit_form_page_path(@form_page) %></li>
+  <li><%= link_to "Destroy", form_page_path(@form_page), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul><br><br>
+
+<%= link_to 'Back', form_pages_path %>

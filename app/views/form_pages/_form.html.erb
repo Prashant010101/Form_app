@@ -1,0 +1,20 @@
+<%= form_with(model: @form_page, url: form_pages_path, method: :post) do |form| %>
+  <div class="field">
+    <%= form.label :username, class: "label" %>
+    <%= form.text_field :username, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, class: "label" %>
+    <%= form.text_field :email, class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age, class: "label" %>
+    <%= form.number_field :age, class: "input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Form Page", class: "button" %>
+  </div>
+<% end %>
